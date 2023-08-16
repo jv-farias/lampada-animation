@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lâmpada com JavaScript</h1>
+    <div>
+        <img id="lampImg" src="./assets/lampada-desligada.webp" alt="Lâmpada Desligada">
+    </div>
+    <div class="buttons">
+    <input type="button" value="Ligue" id="on">
+    <input type="button" value="Desligue" id="off">
+    </div>
+    <script>
+
+        var lampImg = document.getElementById("lampImg")
+        var lig = document.getElementById("on")
+        var desl = document.getElementById("off")
+
+        lig.addEventListener('click', ligar)
+        desl.addEventListener('click', desligar)
+
+        function ligar(){
+            lampImg.src = "./assets/lampada-ligada.webp" 
+            lampImg.alt = "Lâmpada Ligada"
+        }
+        function desligar(){
+            lampImg.src = "./assets/lampada-ligada.webp";
+        }
+
+    </script>
+</body>
+</html>
